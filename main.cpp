@@ -16,14 +16,13 @@ void push(struct Node** head, int node_data)
 }
 void insertAfter(struct Node* prev_node, int node_data)
 {
-  /*1. check if the given prev_node is NULL */
-if (prev_node == NULL)
-{
-   cout<<"the given previous node is required,cannot be NULL"; return; } 
-   struct Node* newNode =new Node; 
-   newNode->data = node_data;
-   newNode->next = prev_node->next;
-    prev_node->next = newNode;
+  if (prev_node == NULL){
+    cout<<"the given previous node is required,cannot be NULL"; return; 
+  } 
+  struct Node* newNode =new Node; 
+  newNode->data = node_data;
+  newNode->next = prev_node->next;
+  prev_node->next = newNode;
 }
 void append(struct Node** head, int node_data)
 {
