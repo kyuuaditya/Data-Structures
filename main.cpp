@@ -36,8 +36,9 @@ if (*head == NULL)
 *head = newNode;
 return;
 }
-while (last->next != NULL)
-last = last->next;
+while (last->next != NULL){
+  last = last->next;
+}
 last->next = newNode;
 return;
 }
@@ -61,6 +62,7 @@ push(&head, 30);
 append(&head, 41);
 insertAfter(head->next, 50);
 insertAfter(head->next->next,40);
+append(&head,88);
  
 cout<<"Final linked list: "<<endl;
 displayList(head);
