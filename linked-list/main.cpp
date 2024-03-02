@@ -48,14 +48,15 @@ void del(struct Node*head,int del_data){
   }
   struct Node* removed=head;
   if(head->data==del_data){
-    if(head->next==NULL){
-      head=NULL;
-    }
     if(head->next!=NULL){
-      head=head->next;
+      head->next=head;
     }
     return;
   }
+  while((removed->next)->data!=del_data){
+    removed=removed->next;
+  }
+  removed->next=removed->next->next;
 }
 
 void displayList(struct Node*node){
@@ -83,6 +84,7 @@ int main(){
   insert(head->next->next->next->next,7);
   append(&head,9);
   insert(head->next->next->next,5);
+  del(head,1);
 
   cout<<"Linked List as follows: "<<endl;
 
