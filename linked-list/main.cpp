@@ -70,7 +70,6 @@ void displayList(struct Node*node){
     cout<<node->data<<"-->";
     node=node->next;
   }
-
   if(node==NULL){
     cout<<"null";
   }
