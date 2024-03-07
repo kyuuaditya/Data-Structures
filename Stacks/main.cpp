@@ -15,7 +15,7 @@ void add(struct Node** head, int new_data){
 }
 
 void pop(struct Node* head){
-  head=head->next;
+  *head=*(head->next);
 }
 
 void display(struct Node*node){
@@ -33,6 +33,12 @@ int main(){
   add(&head,10);
   add(&head,5);
   add(&head,4);
+  add(&head,15);
+  add(&head,42);
+  add(&head,31);
   pop(head);
+  pop(head);
+  add(&head,34);
+  add(&head,17);
   display(head);
 }
