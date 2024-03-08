@@ -10,10 +10,10 @@ void push(struct Node** head, int node_data,int q){
   struct Node* last=*head;
   struct Node* nei=*head;
   if(*head==NULL){
-  struct Node* newNode= new Node;
-  newNode->data=node_data;
-  newNode->next=*head;
-  *head=newNode;
+    struct Node* newNode= new Node;
+    newNode->data=node_data;
+    newNode->next=*head;
+    *head=newNode;
   }else{
     while(last->next!=NULL){
       q--;
